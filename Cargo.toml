@@ -1,0 +1,13 @@
+[package]
+name = "libft4222"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+libc = "0.2.171"
+cfg-if = "^1.0.0"
+
+[dev-dependencies]
+libc = "0.2.171"
+cfg-if = "^1.0.0"
+
