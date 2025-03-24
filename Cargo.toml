@@ -2,6 +2,8 @@
 name = "libft4222"
 version = "0.1.0"
 edition = "2024"
+description = "Rust FFI bindings for the FTDI ftd2xx and ft4222 drivers."
+license = "MIT"
 
 [dependencies]
 libc = "0.2.171"

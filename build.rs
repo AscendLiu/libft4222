@@ -62,5 +62,5 @@ fn main() {
         ft4222_path.to_str().unwrap()
     );
     println!("cargo:rustc-link-lib=static=ft4222");
-    
+
 }
