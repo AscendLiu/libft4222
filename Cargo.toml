@@ -1,10 +1,15 @@
 [package]
 name = "libft4222"
 version = "0.1.0"
-edition = "2024"
 description = "Rust FFI bindings for the FTDI ftd2xx and ft4222 drivers."
+edition = "2024"
+keywords = ["ftdi", "ffi", "usb"]
+categories = ["external-ffi-bindings"]
+authors = ["AscendLiu <ascendliu@qq.com>"]
+readme = "README.md"
+repository = "https://github.com/AscendLiu/libft4222"
 license = "MIT"
-
+#documentation = "https://docs.rs/libft4222"
 [dependencies]
 libc = "0.2.171"
 cfg-if = "^1.0.0"
