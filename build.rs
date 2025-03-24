@@ -37,7 +37,6 @@ fn search_path_ft4222() -> PathBuf {
 }
 
 
-
 fn main() {
     let cwd: PathBuf = env::current_dir().unwrap();
     let mut ftd2xx_path: PathBuf = cwd.clone();
@@ -46,18 +45,22 @@ fn main() {
     let mut ft4222_path: PathBuf = cwd;
     ft4222_path.push(search_path_ft4222());
 
-    // println!(
-    //     "cargo:rustc-link-search=native={}",
-    //     ftd2xx_path.to_str().unwrap()
-    // );
-    // println!("cargo:rustc-link-lib=static=ftd2xx");
 
+    match env::var("CARGO_CFG_TARGET_OS").unwrap().as_str() {
+        "windows" => {
+            println!(
+                "cargo:rustc-link-search=native={}",
+                ftd2xx_path.to_str().unwrap()
+            );
+            println!("cargo:rustc-link-lib=static=ftd2xx");
+        }
+        _ => (),
+    }
 
     println!(
         "cargo:rustc-link-search=native={}",
         ft4222_path.to_str().unwrap()
     );
     println!("cargo:rustc-link-lib=static=ft4222");
-
-
+    
 }
